@@ -9,10 +9,13 @@ const AdminDescription = () => {
     const { data } = await axios.get(`${process.env.REACT_APP_API_URL}/yoga`);
     setDesc(data);
   };
-  useEffect(
-    getAllDesc,
-    [],
-  );
+  useEffect(() => {
+    getAllDesc();
+  }, []);
+  const handleClickDelete = async (id) => {
+    await axios.delete(`${process.env.REACT_APP_API_URL}/yoga/${id}`, [id]);
+    getAllDesc();
+  };
 console.log(desc);
   return (
     <div className="admindesc">
@@ -27,8 +30,10 @@ console.log(desc);
             <p>{d.subtitle2}</p>
             <p>{d.text1}</p>
             <p>{d.text2}</p>
+            <button type="button" onClick={() => handleClickDelete(d.id)}>Supprimer</button>
           </div>
         ))}
+
       </div>
     </div>
   )
