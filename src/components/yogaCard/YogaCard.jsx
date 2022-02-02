@@ -1,6 +1,7 @@
-import { React, useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import axios from 'axios';
+import { React, useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import axios from "axios";
+import Menu from '../menu/Menu'
 import "./yogaCard.scss";
 
 const YogaCard = () => {
@@ -12,15 +13,21 @@ const YogaCard = () => {
   useEffect(() => {
     getAllYoga();
   }, []);
-console.log(yoga);
+  console.log(yoga);
   return (
-    <main>
-      <div className="containerCard">
-        {yoga.map((d) => (
-          <h3>{d.title}</h3>
-        ))}
-      </div>
-    </main>
+    <>
+      <Menu />
+      <main>
+        <div className="containerCard">
+          {yoga.map((yoga) => (
+            <div className="bla">
+              <h3>{yoga.title}</h3>
+              <Link to={`/yoga/${yoga.id}`}>Lien</Link>
+            </div>
+          ))}
+        </div>
+      </main>
+    </>
   );
 };
 

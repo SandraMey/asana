@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from "react-router-dom";
 import axios from 'axios';
 import './adminDescription.scss'
 
@@ -18,24 +19,18 @@ const AdminDescription = () => {
   };
 console.log(desc);
   return (
-    <div className="admindesc">
-      <h2>Mes description</h2>
+    <main className="admindesc">
+      <h2>Liste des Yoga</h2>
       <div className="containerdesc">
         {desc.map((d) => (
           <div className="description">
             <p>{d.title}</p>
-            <p>{d.intro}</p>
-            <p>{d.picture}</p>
-            <p>{d.subtitle1}</p>
-            <p>{d.subtitle2}</p>
-            <p>{d.text1}</p>
-            <p>{d.text2}</p>
             <button type="button" onClick={() => handleClickDelete(d.id)}>Supprimer</button>
           </div>
         ))}
-
+          <Link to={`/admincreate`}>Créer une Fiche Yoga</Link>
       </div>
-    </div>
+    </main>
   )
 };
 
