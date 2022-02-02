@@ -1,5 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
-import HomePage from './components/homePage/HomePage';
+import YogaCard from './components/yogaCard/YogaCard';
 import YogaPage from './components/yogaPage/YogaPage';
 import AdminDescription from './components/adminDescription/AdminDescription';
 import AdminCreateDescription from './components/admincreatedescription/AdminCreateDescription';
@@ -14,7 +14,7 @@ function App() {
     <Header />
     <Menu />
     <Routes>
-      <Route path="/" element={<HomePage />} />
+      <Route path="/" element={<YogaCard />} />
       <Route path="description" element={<YogaPage />} />
       <Route path="admin" element={<AdminDescription />} />
       <Route path="admincreate" element={<AdminCreateDescription />} />
