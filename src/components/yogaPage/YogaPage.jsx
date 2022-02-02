@@ -1,8 +1,13 @@
 import React from 'react';
-import './yogaPages.scss';
+import Header from '../header/Header';
+import './yogaPage.scss';
 
 const YogaPage = () => {
-  return <div></div>;
+  return (
+    <>
+      coucou
+    </>
+  );
 };
 
 export default YogaPage;

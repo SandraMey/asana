@@ -1,0 +1,17 @@
+.header{
+  position: sticky;
+  height: 250px;
+  width: 100%;
+  top: 0;
+  background-image: url("../../assets/header.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 250px;
+  background-position: fixed;
+
+  .titleHeader{
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+    color: antiquewhite;
+  }
+}

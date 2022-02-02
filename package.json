@@ -38,17 +38,7 @@
       "last 1 safari version"
     ]
   },
-  "description": "## Requirements",
-  "main": "index.js",
-  "devDependencies": {},
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/SandraMey/asana.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/SandraMey/asana/issues"
-  },
-  "homepage": "https://github.com/SandraMey/asana#readme"
+  "devDependencies": {
+    "sass": "^1.48.0"
+  }
 }
