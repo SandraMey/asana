@@ -20,15 +20,15 @@ const AdminDescription = () => {
 console.log(desc);
   return (
     <main className="admindesc">
-      <h2>Liste des Yoga</h2>
+      <h2>Liste des fiches Yoga</h2>
       <div className="containerdesc">
         {desc.map((d) => (
           <div className="description">
-            <p>{d.title}</p>
-            <button type="button" onClick={() => handleClickDelete(d.id)}>Supprimer</button>
+            <p className="pAdmin">{d.title}</p>
+            <button type="button" className="buttonAdmin" onClick={() => handleClickDelete(d.id)}>Supprimer</button>
           </div>
         ))}
-          <Link to={`/admincreate`}>Créer une Fiche Yoga</Link>
+          <Link to={`/admincreate`} className="linkAdmin">Créer une Fiche Yoga</Link>
       </div>
     </main>
   )

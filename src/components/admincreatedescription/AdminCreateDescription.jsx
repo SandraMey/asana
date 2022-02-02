@@ -26,14 +26,15 @@ const AdminCreateDescription = () => {
   };
   return (
     <main className="adminCreate">
-      <div className="containerAvis">
+      <h2>Création d'une fiche Yoga</h2>
+      <div className="containerYoga">
         <label
           htmlFor="title"
           id="title"
           onChange={(event) => setTitle(event.target.value)}
         >
-          Titre : 
-          <input type="text" />
+          Nom : 
+          <input type="text" placeholder="Nom" />
         </label>
         <label
           htmlFor="intro"
@@ -41,7 +42,7 @@ const AdminCreateDescription = () => {
           onChange={(event) => setIntro(event.target.value)}
         >
           Intro : 
-          <textarea type="text" />
+          <textarea type="text" placeholder="Phrase d'intro"/>
         </label>
         <label
           htmlFor="subtitle1"
@@ -49,7 +50,7 @@ const AdminCreateDescription = () => {
           onChange={(event) => setSubtitle1(event.target.value)}
         >
           Sous Titre : 
-          <input type="text" />
+          <input type="text" placeholder="Qu'est ce que le '' ? " />
         </label>
         <label
           htmlFor="text1"
@@ -57,7 +58,7 @@ const AdminCreateDescription = () => {
           onChange={(event) => setText1(event.target.value)}
         >
           Texte : 
-          <textarea type="text" />
+          <textarea type="text" placeholder="Explication" />
         </label>
         <label
           htmlFor="subtitle2"
@@ -65,7 +66,7 @@ const AdminCreateDescription = () => {
           onChange={(event) => setSubtitle2(event.target.value)}
         >
           Sous Titre : 
-          <input type="text" />
+          <input type="text" placeholder="Les bienfaits, un peu d'histoire... "/>
         </label>
         <label
           htmlFor="text2"
@@ -73,7 +74,7 @@ const AdminCreateDescription = () => {
           onChange={(event) => setText2(event.target.value)}
         >
           Texte : 
-          <textarea type="text" />
+          <textarea type="text"  placeholder="Explication"/>
         </label>
         <label
           htmlFor="id_tag"
@@ -93,7 +94,7 @@ const AdminCreateDescription = () => {
         </label>
       </div>
       <div className="containerbutton">
-        <button className="buttonSend" type="button" onClick={handleSubmit}>
+        <button className="buttonAdmin" type="button" onClick={handleSubmit}>
           Envoyer
         </button>
       </div>

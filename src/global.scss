@@ -1,7 +1,7 @@
 $width: 768px;
 
-@mixin mobile {
-    @media (max-width: #{$width}) {
+@mixin desktop {
+    @media (min-width: #{$width}) {
         @content
     }
 }

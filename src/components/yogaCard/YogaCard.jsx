@@ -17,11 +17,12 @@ const YogaCard = () => {
   return (
     <>
       <Menu />
-      <main>
+      <main className="home">
         <div className="containerCard">
           {yoga.map((yoga) => (
-            <div className="bla">
+            <div className="card">
               <h3>{yoga.title}</h3>
+              <img src={`${process.env.REACT_APP_API_URL}/yoga/${yoga.picture}`} alt={yoga.title} />
               <Link to={`/yoga/${yoga.id}`}>Lien</Link>
             </div>
           ))}

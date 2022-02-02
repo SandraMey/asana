@@ -1,0 +1,76 @@
+@import "../../global.scss";
+
+.adminCreate{
+  background-color: #f4e8e0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+  @include desktop{
+    height: calc(100vh - 250px);
+    
+  }
+
+  .containerYoga{
+    margin: 10px;
+
+    @include desktop{
+      display: block;
+    }
+
+    label{
+      margin: 5px;
+    }
+    input{
+      margin: 5px;
+      background-color: #e0af66;
+      border-radius: 10px;
+      border: 2px solid #e0af66;
+      color: #3986A0;
+      font-weight: bold;
+    }
+    textarea{
+      margin: 5px;
+      width: 95%;
+      height: 100px;
+      background-color: #e0af66;
+      border-radius: 10px;
+      border: 2px solid #e0af66;
+      color: #3986A0;
+
+      @include desktop{
+        width: 98%;
+      }
+    }
+    #picture{
+      border: 1px solid #ccc;
+      display: inline-block;
+      background-color: #e0af66;
+      padding: 6px 12px;
+      color: #3986A0;
+
+      cursor: pointer;
+        input[type="file"] {
+          display: none;
+        }
+      }
+  }
+  .buttonAdmin{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e0af66;
+    color: #3986A0;
+    font-size: 15px;
+    padding: 5px 50px;
+    border: 2px solid #e0af66;
+    border-radius: 10px;
+    height: 30px;
+    width: 50px;
+    cursor: pointer;
+    &:hover {
+      filter: brightness(1.25);
+    }
+  }
+}

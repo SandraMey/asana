@@ -1,0 +1,68 @@
+@import "../../global.scss";
+
+.admindesc{
+  background-color: #f4e8e0;
+  min-height: calc(100vh - 250px);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+
+  .containerdesc{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    @include desktop{
+      flex-direction: row;
+    }
+
+    .description{
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-direction: column;
+      margin: 10px;
+      height: 100px;
+
+      @include desktop{
+       margin: 30px;
+       justify-content: space-around;
+       text-align: center;
+      }
+
+      .buttonAdmin{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #e0af66;
+        color: #3986A0;
+        font-size: 15px;
+        padding: 5px 50px;
+        border: 2px solid #e0af66;
+        border-radius: 10px;
+        height: 30px;
+        width: 50px;
+        cursor: pointer;
+        &:hover {
+          filter: brightness(1.25);
+        }
+      }
+    }
+    .linkAdmin{
+      color: black;
+      text-decoration: none;
+      background-color: #e0af66;
+      color: #3986A0;
+      font-size: 15px;
+      padding: 5px;
+      border: 2px solid #e0af66;
+      border-radius: 10px;
+      height: 30px;
+      width: 150px;
+      text-align: center;
+    }
+  }
+}
