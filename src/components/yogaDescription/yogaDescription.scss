@@ -6,7 +6,12 @@
   .description{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 0.2fr;
+
+    .containerLink{
+      grid-column: 1 / span 2;
+      grid-row: 4;
+    }
 
     .containerintro{
       grid-column: 1;
@@ -40,5 +45,7 @@
       flex-direction: column;
       justify-content: space-around;
     }
+
   }
+
 }
