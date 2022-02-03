@@ -1,7 +1,6 @@
 @import "../../global.scss";
 
 .adminCreate{
-  background-color: #f4e8e0;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -24,9 +23,9 @@
     }
     input{
       margin: 5px;
-      background-color: #e0af66;
+      background-color: antiquewhite;;
       border-radius: 10px;
-      border: 2px solid #e0af66;
+      border: 2px solid antiquewhite;;
       color: #3986A0;
       font-weight: bold;
     }
@@ -34,9 +33,9 @@
       margin: 5px;
       width: 95%;
       height: 100px;
-      background-color: #e0af66;
+      background-color: antiquewhite;;
       border-radius: 10px;
-      border: 2px solid #e0af66;
+      border: 2px solid antiquewhite;;
       color: #3986A0;
 
       @include desktop{
@@ -46,9 +45,12 @@
     #picture{
       border: 1px solid #ccc;
       display: inline-block;
-      background-color: #e0af66;
+      background-color: antiquewhite;;
       padding: 6px 12px;
       color: #3986A0;
+      display: flex;
+      justify-content: center;
+      
 
       cursor: pointer;
         input[type="file"] {
@@ -60,11 +62,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #e0af66;
+    background-color: antiquewhite;;
     color: #3986A0;
     font-size: 15px;
     padding: 5px 50px;
-    border: 2px solid #e0af66;
+    border: 2px solid antiquewhite;;
     border-radius: 10px;
     height: 30px;
     width: 50px;

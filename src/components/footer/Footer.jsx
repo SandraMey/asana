@@ -14,6 +14,9 @@ const Footer = () => {
         <Link to={`/contact`} className="contactlink"> 
           <p>Par içi pour me contacter</p>
         </Link>
+        <Link to={`/admin`} className="adminlink"> 
+          <p>Admin Part</p>
+        </Link>
       </div>
       <div className="linkedin">
         <a href="https://www.linkedin.com/in/sandra-meyniel">

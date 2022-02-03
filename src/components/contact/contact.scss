@@ -1,5 +1,3 @@
-@import "../../global.scss";
-
 .contact{
     display: flex;
 
@@ -56,5 +54,15 @@
                 color: green;
             }
         }
+        .retourLink{
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+            text-decoration: none;
+            color: #3986A0;
+            font-size: 15px;
+    
+        }
     }
+
 }

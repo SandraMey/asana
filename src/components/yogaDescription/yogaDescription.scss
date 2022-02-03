@@ -1,15 +1,15 @@
+@import "../../global.scss";
 .containerdesc{
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #f4e8e0;
   min-height: calc(100vh - 250px);
 
 
   .description{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1.5fr 1fr 0.2fr;
+    grid-template-rows: 0.5fr 1fr 0.5fr 0.1fr;
     margin: 10px;
 
     .containerLink{
@@ -54,6 +54,11 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      margin-top: 40px;
+
+      @include desktop{
+        margin-left: 300px;
+      }
     }
     .containersub1{
       grid-column: 1 / span 2;

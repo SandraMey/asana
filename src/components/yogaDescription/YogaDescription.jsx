@@ -23,7 +23,7 @@ console.log(yogaCard.picture);
             <h1 className="titledesc">{yogaCard.title}</h1>
             <p className="introdesc">{yogaCard.intro}</p>
           </div>
-          <img src={`${process.env.REACT_APP_API_URL}/${yogaCard.picture}`} alt={yogaCard.title} />
+          <img className='imgdesc' width="200"src={`${process.env.REACT_APP_API_URL}/${yogaCard.picture}`} alt={yogaCard.title} />
           <div className="containersub1">
             <h2 className="subtitledesc">{yogaCard.subtitle1}</h2>
             <p className="pdesc">{yogaCard.text1}</p>
