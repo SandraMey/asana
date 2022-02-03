@@ -34,7 +34,7 @@ const YogaCard = () => {
     handleChangeDynamique();
   }, []);
   return (
-    <>
+    <main className="home">
       <div className="nav">
         <div className="all" onClick={handleChangeAll} role="presentation">
           <h3>All</h3>
@@ -49,7 +49,7 @@ const YogaCard = () => {
           <h3>Méditation</h3>
         </div>
       </div>
-      <main className="home">
+      <div className="home">
         <div className="containerCard">
           {yoga.map((yoga) => (
             <div className="card">
@@ -66,8 +66,8 @@ const YogaCard = () => {
             </div>
           ))}
         </div>
-      </main>
-    </>
+      </div>
+    </main>
   );
 };
 

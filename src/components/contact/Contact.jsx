@@ -25,8 +25,6 @@ function Contact() {
         });
 
     }
-
-
     return (
       <div className="contact" id="contact">
       <div className="right">

@@ -1,8 +1,12 @@
 .footer{
+  position: fixed;
+  bottom: 0;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr ;
-  margin: 20px;
+  background-color: antiquewhite;
+  width: 100%;
+  height: 100px;
 
 
   .imgContainer{
@@ -15,11 +19,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-left: 30px;
+    margin-top: 30px;
 
     img{
         height: 100%;
-
-
     }
   }
 
@@ -29,6 +33,16 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
+
+    .contactlink{
+      text-decoration: none;
+      color: #3986A0;
+      font-size: 15px;
+      text-align: center;
+      text-align: center;
+      display: inline-block;
+      position: relative;
+    }
   }
 
   .linkedin{

@@ -1,29 +1,28 @@
 @import "../../global.scss";
 
-.nav{
-  display: flex;
-  justify-content: space-around;
-  color: #3986A0;
-  margin: 10px 5px 20px 5px;
-
-  :active{
-    text-decoration: underline;
-  }
-  :target{
-    text-decoration: underline;
-  }
-  .all{
-    cursor: pointer;
-  }
-}
-
 .home{
-  min-height: calc(100vh - 250px);
+
+  .nav{
+    display: flex;
+    justify-content: space-around;
+    color: #3986A0;
+    margin: 10px 5px 20px 5px;
+  
+    :active{
+      text-decoration: underline;
+    }
+    :target{
+      text-decoration: underline;
+    }
+    .all{
+      cursor: pointer;
+    }
+  }
 
   .containerCard{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
 
     @include desktop{
       grid-template-rows: 1fr 1fr;
@@ -41,9 +40,8 @@
       }
 
       .linkCard{
-        color: black;
         text-decoration: none;
-        color: #3986A0;
+        color: antiquewhite;
         font-size: 15px;
         text-align: center;
         text-align: center;
