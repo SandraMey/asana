@@ -28,7 +28,10 @@ console.log(desc);
             <button type="button" className="buttonAdmin" onClick={() => handleClickDelete(d.id)}>Supprimer</button>
           </div>
         ))}
+        <div className="containerLink">
           <Link to={`/admincreate`} className="linkAdmin">Créer une Fiche Yoga</Link>
+          <Link to={`/admintag`} className="linktag">Modifier un Tag</Link>
+        </div>
       </div>
     </main>
   )

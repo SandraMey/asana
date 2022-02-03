@@ -50,18 +50,41 @@
         }
       }
     }
-    .linkAdmin{
-      color: black;
-      text-decoration: none;
-      background-color: antiquewhite;;
-      color: #3986A0;
-      font-size: 15px;
-      padding: 5px;
-      border: 2px solid antiquewhite;;
-      border-radius: 10px;
-      height: 30px;
-      width: 150px;
-      text-align: center;
+
+    .containerLink{
+
+      .linkAdmin{
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        background-color: antiquewhite;;
+        color: #3986A0;
+        font-size: 15px;
+        padding: 5px;
+        border: 2px solid antiquewhite;;
+        border-radius: 10px;
+        height: 30px;
+        width: 150px;
+  
+      }
+      .linktag{
+        display: flex;
+        text-decoration: none;
+        background-color: antiquewhite;;
+        color: #3986A0;
+        font-size: 15px;
+        padding: 5px;
+        border: 2px solid antiquewhite;;
+        border-radius: 10px;
+        height: 30px;
+        width: 150px;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+      }
     }
   }
 }
