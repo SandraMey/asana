@@ -6,6 +6,7 @@
   align-items: center;
   flex-direction: column;
   padding: 10px;
+  color: #3986A0;
   @include desktop{
     height: calc(100vh - 250px);
     
@@ -45,16 +46,13 @@
     #picture{
       border: 1px solid #ccc;
       display: inline-block;
-      background-color: antiquewhite;;
+      background-color: antiquewhite;
       padding: 6px 12px;
       color: #3986A0;
-      display: flex;
-      justify-content: center;
-      
-
       cursor: pointer;
+
         input[type="file"] {
-          display: none;
+
         }
       }
   }
