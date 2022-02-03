@@ -36,7 +36,6 @@ console.log(yogaCard.picture);
             <Link to="/" className='linkHome'>Retour à l'accueil</Link>
           </div>
         </div>
-
     </div>
   )
 };

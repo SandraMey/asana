@@ -5,6 +5,7 @@ import "./yogaCard.scss";
 
 const YogaCard = () => {
   const [yoga, setYoga] = useState([]);
+  const [tag, setTag] = useState([]);
   const handleChangeAll = async () => {
     const { data } = await axios.get(`${process.env.REACT_APP_API_URL}/yoga`);
     setYoga(data);
@@ -12,22 +13,36 @@ const YogaCard = () => {
   useEffect(() => {
     handleChangeAll();
   }, []);
+  const getTag = async () => {
+    const { data } = await axios.get(`${process.env.REACT_APP_API_URL}/tag`);
+    setTag(data);
+  };
+  useEffect(() => {
+    getTag();
+  }, []);
+  console.log(tag);
   const handleChangeDynamique = async () => {
-    const { data } = await axios.get(`${process.env.REACT_APP_API_URL}/tag/1/yoga`);
+    const { data } = await axios.get(
+      `${process.env.REACT_APP_API_URL}/tag/1/yoga`
+    );
     setYoga(data);
   };
   useEffect(() => {
     handleChangeDynamique();
   }, []);
   const handleChangeDoux = async () => {
-    const { data } = await axios.get(`${process.env.REACT_APP_API_URL}/tag/2/yoga`);
+    const { data } = await axios.get(
+      `${process.env.REACT_APP_API_URL}/tag/2/yoga`
+    );
     setYoga(data);
   };
   useEffect(() => {
     handleChangeDynamique();
   }, []);
   const handleChangMéditation = async () => {
-    const { data } = await axios.get(`${process.env.REACT_APP_API_URL}/tag/3/yoga`);
+    const { data } = await axios.get(
+      `${process.env.REACT_APP_API_URL}/tag/3/yoga`
+    );
     setYoga(data);
   };
   useEffect(() => {
@@ -35,20 +50,30 @@ const YogaCard = () => {
   }, []);
   return (
     <main className="home">
-      <div className="nav">
-        <div className="all" onClick={handleChangeAll} role="presentation">
-          <h3>All</h3>
-        </div>
-        <div className="all" onClick={handleChangeDynamique} role="presentation">
-          <h3>Dynamique</h3>
-        </div>
-        <div className="all" onClick={handleChangeDoux} role="presentation">
-          <h3>Doux</h3>
-        </div>
-        <div className="all" onClick={handleChangMéditation} role="presentation">
-          <h3>Méditation</h3>
-        </div>
-      </div>
+        {tag && (
+          <div className="nav">
+            <div className="all" onClick={handleChangeAll} role="presentation">
+              <h3>All</h3>
+            </div>
+            <div
+              className="all"
+              onClick={handleChangeDynamique}
+              role="presentation"
+            >
+              <h3>Dynamique</h3>
+            </div>
+            <div className="all" onClick={handleChangeDoux} role="presentation">
+              <h3>Doux</h3>
+            </div>
+            <div
+              className="all"
+              onClick={handleChangMéditation}
+              role="presentation"
+            >
+              <h3>Méditation</h3>
+            </div>
+          </div>
+        )}
       <div className="home">
         <div className="containerCard">
           {yoga.map((yoga) => (

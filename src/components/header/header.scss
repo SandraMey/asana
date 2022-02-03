@@ -7,10 +7,15 @@
   background-size: 100% 250px;
   background-position: fixed;
 
+  .linkHome{
+    text-decoration: none;
+  }
+
   .titleHeader{
     display: flex;
     justify-content: center;
     padding-top: 100px;
     color: antiquewhite;
+    text-decoration: none;
   }
 }

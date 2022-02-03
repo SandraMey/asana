@@ -48,6 +48,10 @@
         display: inline-block;
         position: relative;
 
+        :hover{
+          opacity: 0.50;
+        }
+
         .containertext{
           position: absolute;
           top: 50%;
