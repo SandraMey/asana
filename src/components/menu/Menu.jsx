@@ -3,41 +3,21 @@ import axios from "axios";
 import "./menu.scss";
 
 const Menu = () => {
-  const [tag, setTag] = useState([]);
-  const getAllTag = async () => {
+  const [tags, setTags] = useState([]);
+  const getAllTags = async () => {
     const { data } = await axios.get(`${process.env.REACT_APP_API_URL}/tag`);
-    setTag(data);
+    setTags(data);
   };
-  useEffect(() => {
-    getAllTag();
-  }, []);
-
-  const handleClick1 = async () => {
-    await axios.get(`${process.env.REACT_APP_API_URL}/tag/1/yoga`);
-  };
-  const handleClick2 = async () => {
-    await axios.get(`${process.env.REACT_APP_API_URL}/tag/2/yoga`);
-  };
-  const handleClick3 = async () => {
-    await axios.get(`${process.env.REACT_APP_API_URL}/tag/3/yoga`);
-  };
+  useEffect(getAllTags, []);
+  console.log(tags);
 
   return (
     <div className="nav">
-        <ul>
-          <li>
-            <a href="">All</a>
-          </li>
-          <li>
-            <a href="">Dynamique</a>
-          </li>
-          <li>
-            <a href="">Doux</a>
-          </li>
-          <li>
-            <a href="">Méditation</a>
-          </li>
-        </ul>
+      {tags.map((tag) => (
+        <div className="card">
+          <h3>{tag.title}</h3>
+        </div>
+      ))}
     </div>
   );
 };

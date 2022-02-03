@@ -1,6 +1,13 @@
+.all{
+  cursor: pointer;
+}
+
+
 .home{
   background-color: #f4e8e0;
   min-height: calc(100vh - 250px);
+
+
 
   .containerCard{
     display: grid;

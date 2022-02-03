@@ -1,29 +1,67 @@
 import { React, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
-import Menu from '../menu/Menu'
 import "./yogaCard.scss";
 
 const YogaCard = () => {
   const [yoga, setYoga] = useState([]);
-  const getAllYoga = async () => {
+  const handleChangeAll = async () => {
     const { data } = await axios.get(`${process.env.REACT_APP_API_URL}/yoga`);
     setYoga(data);
   };
   useEffect(() => {
-    getAllYoga();
+    handleChangeAll();
+  }, []);
+  const handleChangeDynamique = async () => {
+    const { data } = await axios.get(`${process.env.REACT_APP_API_URL}/tag/1/yoga`);
+    setYoga(data);
+  };
+  useEffect(() => {
+    handleChangeDynamique();
+  }, []);
+  const handleChangeDoux = async () => {
+    const { data } = await axios.get(`${process.env.REACT_APP_API_URL}/tag/2/yoga`);
+    setYoga(data);
+  };
+  useEffect(() => {
+    handleChangeDynamique();
+  }, []);
+  const handleChangMéditation = async () => {
+    const { data } = await axios.get(`${process.env.REACT_APP_API_URL}/tag/3/yoga`);
+    setYoga(data);
+  };
+  useEffect(() => {
+    handleChangeDynamique();
   }, []);
   console.log(yoga);
   return (
     <>
-      <Menu />
+      <div className="nav">
+        <div className="all" onClick={handleChangeAll} role="presentation">
+          <h3>All</h3>
+        </div>
+        <div className="all" onClick={handleChangeDynamique} role="presentation">
+          <h3>Dynamique</h3>
+        </div>
+        <div className="all" onClick={handleChangeDoux} role="presentation">
+          <h3>Doux</h3>
+        </div>
+        <div className="all" onClick={handleChangMéditation} role="presentation">
+          <h3>Méditation</h3>
+        </div>
+      </div>
       <main className="home">
         <div className="containerCard">
           {yoga.map((yoga) => (
             <div className="card">
               <Link to={`/yoga/${yoga.id}`} className="linkCard">
-              <h3>{yoga.title}</h3>
-              <img width="200" height="200" src={`${process.env.REACT_APP_API_URL}/${yoga.picture}`} alt="" />
+                <h3>{yoga.title}</h3>
+                <img
+                  width="200"
+                  height="200"
+                  src={`${process.env.REACT_APP_API_URL}/${yoga.picture}`}
+                  alt=""
+                />
               </Link>
             </div>
           ))}
