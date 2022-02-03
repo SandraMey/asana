@@ -31,6 +31,7 @@ console.log(desc);
         <div className="containerLink">
           <Link to={`/admincreate`} className="linkAdmin">Créer une Fiche Yoga</Link>
           <Link to={`/admintag`} className="linktag">Modifier un Tag</Link>
+          <Link to={`/`} className="linktag">Retour Home</Link>
         </div>
       </div>
     </main>

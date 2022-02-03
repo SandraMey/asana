@@ -1,0 +1,46 @@
+.admintag{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+  height: calc(100vh - 350px);
+
+  .containertag{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+
+    .pAdmin{
+      margin: 10px;
+    }
+  }
+  input{
+    margin: 5px;
+    background-color: antiquewhite;
+    border-radius: 10px;
+    border: 2px solid antiquewhite;
+    color: #3986A0;
+    font-weight: bold;
+  }
+  .buttonhandle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: antiquewhite;;
+    color: #3986A0;
+    font-size: 15px;
+    padding: 5px 50px;
+    border: 2px solid antiquewhite;;
+    border-radius: 10px;
+    height: 30px;
+    width: 50px;
+    margin-left: 100px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    &:hover {
+      filter: brightness(1.25);
+    }
+  }
+}

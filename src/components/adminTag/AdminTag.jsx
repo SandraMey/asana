@@ -42,6 +42,7 @@ const AdminTag = () => {
             <p className="pAdmin">{tag.title}</p>
           </div>
         ))}
+      </div>
         <form>
           <label htmlFor="title">Tag 1 : 
             <input
@@ -51,7 +52,7 @@ const AdminTag = () => {
               onChange={(e) => setTitle(e.target.value)}
             />
           </label>
-          <button type="submit" onClick={handleClickModify}>
+          <button className="buttonhandle" type="submit" onClick={handleClickModify}>
             Modifier
           </button>
         </form>
@@ -64,7 +65,7 @@ const AdminTag = () => {
               onChange={(e) => setTitle(e.target.value)}
             />
           </label>
-          <button type="submit" onClick={handleClickModify2}>
+          <button className="buttonhandle" type="submit" onClick={handleClickModify2}>
             Modifier
           </button>
         </form>
@@ -77,11 +78,11 @@ const AdminTag = () => {
               onChange={(e) => setTitle(e.target.value)}
             />
           </label>
-          <button type="submit" onClick={handleClickModify3}>
+          <button className="buttonhandle" type="submit" onClick={handleClickModify3}>
             Modifier
           </button>
         </form>
-      </div>
+
     </div>
   );
 };
