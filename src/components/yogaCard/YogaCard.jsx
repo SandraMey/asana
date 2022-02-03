@@ -21,9 +21,10 @@ const YogaCard = () => {
         <div className="containerCard">
           {yoga.map((yoga) => (
             <div className="card">
+              <Link to={`/yoga/${yoga.id}`} className="linkCard">
               <h3>{yoga.title}</h3>
-              <img src={`${process.env.REACT_APP_API_URL}/yoga/${yoga.picture}`} alt={yoga.title} />
-              <Link to={`/yoga/${yoga.id}`}>Lien</Link>
+              <img width="200" height="200" src={`${process.env.REACT_APP_API_URL}/${yoga.picture}`} alt="" />
+              </Link>
             </div>
           ))}
         </div>

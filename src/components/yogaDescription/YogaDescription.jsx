@@ -15,7 +15,7 @@ const YogaDescription = () => {
   useEffect(() => {
     getAllDesc();
   }, []);
-console.log(yogaCard);
+console.log(yogaCard.picture);
   return (
     <div className="containerdesc">
         <div className="description">
@@ -23,17 +23,17 @@ console.log(yogaCard);
             <h1 className="titledesc">{yogaCard.title}</h1>
             <p className="introdesc">{yogaCard.intro}</p>
           </div>
-          <p className="imgdesc">{yogaCard.picture}</p>
+          <img src={`${process.env.REACT_APP_API_URL}/${yogaCard.picture}`} alt={yogaCard.title} />
           <div className="containersub1">
-            <p>{yogaCard.subtitle1}</p>
-            <p>{yogaCard.subtitle2}</p>
+            <h2 className="subtitledesc">{yogaCard.subtitle1}</h2>
+            <p className="pdesc">{yogaCard.text1}</p>
           </div>
           <div className="containersub2">
-            <p>{yogaCard.text1}</p>
-            <p>{yogaCard.text2}</p>
+            <h2 className="subtitledesc">{yogaCard.subtitle2}</h2>
+            <p className="pdesc">{yogaCard.text2}</p>
           </div>
           <div className="containerLink">
-            <Link to="/">Retour à l'accueil</Link>
+            <Link to="/" className='linkHome'>Retour à l'accueil</Link>
           </div>
         </div>
 
