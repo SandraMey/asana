@@ -1,25 +1,44 @@
-.all{
-  cursor: pointer;
+@import "../../global.scss";
+
+.nav{
+  display: flex;
+  justify-content: space-around;
+  color: #3986A0;
+  margin: 10px 5px 20px 5px;
+
+  :active{
+    text-decoration: underline;
+  }
+  :target{
+    text-decoration: underline;
+  }
+  .all{
+    cursor: pointer;
+  }
 }
 
-
 .home{
-  background-color: #f4e8e0;
   min-height: calc(100vh - 250px);
-
-
 
   .containerCard{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
+
+    @include desktop{
+      grid-template-rows: 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
   
     .card{
       display: flex;
       justify-content: center;
       align-items: center;
-      border: 1px black solid ;
       height: 200px;
+
+      @include desktop{
+        height: 400px;
+      }
 
       .linkCard{
         color: black;
@@ -27,6 +46,20 @@
         color: #3986A0;
         font-size: 15px;
         text-align: center;
+        text-align: center;
+        display: inline-block;
+        position: relative;
+
+        .containertext{
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+        .yogapicture{
+          width: 100%;
+          height: 100%;
+        }
       }
     }
   

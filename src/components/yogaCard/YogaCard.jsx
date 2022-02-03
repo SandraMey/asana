@@ -33,7 +33,6 @@ const YogaCard = () => {
   useEffect(() => {
     handleChangeDynamique();
   }, []);
-  console.log(yoga);
   return (
     <>
       <div className="nav">
@@ -55,12 +54,13 @@ const YogaCard = () => {
           {yoga.map((yoga) => (
             <div className="card">
               <Link to={`/yoga/${yoga.id}`} className="linkCard">
-                <h3>{yoga.title}</h3>
+                <div className="containertext">
+                  <h3>{yoga.title}</h3>
+                </div>
                 <img
-                  width="200"
-                  height="200"
                   src={`${process.env.REACT_APP_API_URL}/${yoga.picture}`}
-                  alt=""
+                  alt={yoga.title}
+                  className="yogapicture"
                 />
               </Link>
             </div>

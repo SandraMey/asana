@@ -84,6 +84,10 @@ const AdminCreateDescription = () => {
           Tag : 
           <input type="number" />
         </label>
+        <div className="containerTag">
+          <p>Choix du tag</p>
+          <p>1 = Dynamique 2 = Doux 3 = Médiation</p>
+        </div>
         <label
           htmlFor="picture"
           id="picture"
@@ -93,6 +97,7 @@ const AdminCreateDescription = () => {
           <input id="file" type="file" className="inputFileYoga" />
         </label>
       </div>
+
       <div className="containerbutton">
         <button className="buttonAdmin" type="button" onClick={handleSubmit}>
           Envoyer
